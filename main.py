@@ -1,34 +1,14 @@
-from WoodPile import WoodPile as Pile
-from Saw import Saw
-from Lumber import Lumber
-
-from TablePlans import TablePlans as Table
-from ChairPlans import ChairPlans as Chair
-from BookshelfPlans import BookshelfPlans as Bookshelf
+# TODO: import correct modules
 
 def main():
-    saw = Saw()
-    pile = Pile()
 
-    total_needed = 55
+    # TODO: Instantiate/initialize objects necessary, namely:
+    #       - Saw
+    #       - WoodPile
 
-    while total_needed > 0:
-        
-        board = Lumber()
-        cut = saw.use(board)
-        pile.add(cut)
+    # TODO: Create Lumber, cut Lumber with Saw, add to WoodPile
 
-        for piece in cut:
-            total_needed -= piece.length
-
-    chair = Chair(pile.pieces)
-    print(chair)
-
-    table = Table(pile.pieces)
-    print(table)
-
-    bookshelf = Bookshelf(pile.pieces)
-    print(bookshelf)
+    # TODO: Make plans
 
 if __name__ == "__main__":
     main()
