@@ -47,7 +47,8 @@ class ChairPlans(FixtureSpec):
             {"find": "ItemSpec", "replace": "FixtureSpec"},
             {"find": "consumable = True\n", "replace": ""},
             {"find": "  ", "replace": "    "},
-            {"find": "    \n", "replace": ""}
+            {"find": "    \n", "replace": ""},
+            {"find": "__file__", "replace":""}
         ]
         with open("products/Chair.py", "r+") as fh:
             source = fh.read()
